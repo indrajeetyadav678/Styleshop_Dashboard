@@ -106,7 +106,6 @@ function App() {
           <Route path="mencat19" element={<Footwear />} />
           <Route path="mencat20" element={<BabyCares />} />
           <Route path="productinfo" element={<Product_info />} />
-
         </Route>
       </Routes>
     </BrowserRouter>

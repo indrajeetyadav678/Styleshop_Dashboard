@@ -23,17 +23,25 @@ const shownavmanubar = () => {
 function dropmanu() {
     document.getElementById('dropdown').style.display = "block";
 }
+function logdropmanu() {
+    document.getElementById('dropdown1').style.display = "block";
+}
 function dropnone() {
     document.getElementById('dropdown').style.display = "none";
+}
+function dropnone1() {
+    document.getElementById('dropdown1').style.display = "none";
 }
 function drophide() {
     let track = window.event.clientY;
     console.log(track)
     if (track < 5) {
         document.getElementById('dropdown').style.display = "none";
+        document.getElementById('dropdown1').style.display = "none";
     }
     else if (track > 55) {
         document.getElementById('dropdown').style.display = "none";
+        document.getElementById('dropdown1').style.display = "none";
     }
 }
 
@@ -46,7 +54,7 @@ const Layout = () => {
     return (
         <>
             <body id="body1">
-                <div className="navbar" onMouseLeave={drophide}>
+                <div id="navbar" onMouseLeave={drophide}>
                     <div id="navleft">
                         <FaBars id="linemanu" onClick={shownavmanubar} />
                         <Link to="shopname" className="nabbtn1">Styleshop</Link>
@@ -76,11 +84,13 @@ const Layout = () => {
                                 <div id="carticon"><FaShoppingCart /></div>
                             </div>
                         </Link>
-                        <div id="addlikewrapper" >
-                            <div id="liked_p">{addlikedvalue}</div>
-                            <Link to="navlike" className="heartbtn1" ><FaHeart  /></Link>
-                        </div>
-                        <Link to="navcreateacc" className="Rnavbtn1" ><FaUser /></Link>
+                        <Link to="navlike" className="heartbtn1" >
+                            <div id="addlikewrapper" >
+                                <div id="liked_p">{addlikedvalue}</div>
+                                <div><FaHeart /></div>       
+                            </div>
+                        </Link>
+                        <div onMouseEnter={logdropmanu} className="Rnavbtn1" ><FaUser /></div>
                     </div>
 
                 </div>
@@ -88,6 +98,11 @@ const Layout = () => {
                     <li> <Link to="kids" className="dropbtn1">Kids cloths</Link></li>
                     <li> <Link to="baby" className="dropbtn2">Boby cloths</Link></li>
                     <li> <Link to="babytoy" className="dropbtn3">Toys</Link></li>
+                </ul>
+                <ul id="dropdown1" onMouseLeave={dropnone1}>
+                    <li> <Link to="navcreateacc" className="dropbtn1">Signup</Link></li>
+                    <li> <Link to="login" className="dropbtn2">Login</Link></li>
+                    <li> <a href="dashboard" className="dropbtn3">Admin Dashboard</a></li>
                 </ul>
                 <Outlet />
                 <Footer />

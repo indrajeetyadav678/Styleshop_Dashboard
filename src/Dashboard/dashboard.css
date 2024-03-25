@@ -1,0 +1,214 @@
+/* *{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+} */
+#dashboard_body {
+    padding-left: 200px;
+}
+
+/* ============== Left-side Dnavbar ==================== */
+#Dnavbar_left_wrapper {
+    float: left;
+}
+
+#Dnavbar_left_box {
+    width: 200px;
+    height: 650px;
+    background-color: rgb(88, 86, 86);
+    list-style: none;
+    padding-left: 30px;
+    /* text-align: center; */
+    padding-top: 0px;
+    position: fixed;
+}
+
+#Dshopname {
+    font-size: 35px;
+    color: white;
+    color: aliceblue;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-family: Rage;
+    /* text-align: center; */
+}
+
+#Dnavbar_left_box li {
+    margin-top: 20px;
+}
+
+#Dnavbar_left_box li .Dbtn1 {
+    color: aliceblue;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+#Dnavbar_left_box li .Dbtn1:hover {
+    color: red
+}
+
+/* =================== Top-side DNavbar ================== */
+#Dnavbar_top_box {
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgb(210, 204, 204);
+    position: sticky;
+    top: -8px;
+}
+
+#Dshopname1 {
+    font-size: 22px;
+    color: aliceblue;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-family: Rage;
+    display: none;
+}
+
+#dtop_nabvar_right {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+#Light_modes {
+    width: 60px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+#Light_modes div {
+    width: 30px;
+    text-align: center;
+}
+
+#Dnavbar_top_box .Dbtn2 {
+    /* margin-right: 15px; */
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: rgb(90, 93, 95);
+    font-weight: 800;
+    position: relative;
+}
+#dnotify_icon,#demail_icon{
+    font-size: 22px;
+    position: relative;
+    /* z-index: -1; */
+}
+#dnotify_icon_no,#demail_icon_no{
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    top: -5px;
+    left: 5px;
+}
+#admin_profile{
+    width:30px;
+    height:30px;
+    border:1px solid black;
+    border-radius: 50%;
+    position: relative;
+}
+#dlogin_profile_wrapper{
+    width:250px;
+    height:400px;
+    border: 1px solid black;
+    position: absolute;
+    top:60px;
+    right: 8px;
+    background-color: rgb(232, 223, 223);
+    display: none;
+}
+#dlogin_profile_wrapper::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    z-index: 5;
+    background-color: rgb(232, 223, 223);
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -10px;
+    right: 35px;
+}
+
+#demail_Box_wrapper{
+    width:250px;
+    height:400px;
+    border: 1px solid black;
+    position: absolute;
+    top:50px;
+    /* right: px; */
+    background-color: rgb(232, 223, 223);
+    display: none;
+}
+#demail_Box_wrapper::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    z-index: 5;
+    background-color: rgb(232, 223, 223);
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -10px;
+    right: 35px;
+}
+
+#dnotice_box_wrapper{
+    width:250px;
+    height:400px;
+    border: 1px solid black;
+    position: absolute;
+    top:55px;
+    right: 150px;
+    background-color: rgb(232, 223, 223);
+    display: none;
+}
+#dnotice_box_wrapper::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    z-index: 5;
+    background-color: rgb(232, 223, 223);
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -10px;
+    right: 35px;
+}
+
+
+
+
+
+
+
+
+
+#dashboardpage_box {
+    height: 800px;
+    text-align: center;
+    padding-top: 100px;
+}
