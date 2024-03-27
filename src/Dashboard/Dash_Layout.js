@@ -22,10 +22,16 @@ const Dash_Layout = () => {
         }
     }
     const activelightmode=()=>{
-        document.getElementsByClassName('adbody').style.backgroundcolor="none"
+        document.getElementsByClassName('modebody').style.backgroundcolor="none"
     }
     const activedarkmode=()=>{
-        document.getElementsByClassName('adbody').style.backgroundcolor="dark"
+        // document.getElementsByClassName('modebody').style.backgroundcolor="dark"
+        if (document.body) {
+            // Set the background color property of the body element
+            document.body.style.backgroundColor = 'white';
+        } else {
+            console.error('Document body is undefined.');
+        }
     }
     const shownotice_box=()=>{
         document.getElementById('dnotice_box_wrapper').style.display="block";
@@ -67,7 +73,7 @@ const hide_email_notice_box=()=>{
 }
 
     return (
-        <>
+        <div id="modebody">
         <div className="adbody">
             <aside id="Dnavbar_left_wrapper">
                 <ul id="Dnavbar_left_box">
@@ -113,7 +119,7 @@ const hide_email_notice_box=()=>{
                 <div className="developer">&#169; Developed by Indrajeet Yaduwanshi</div>
             </div>
             </div>
-        </>
+        </div>
     );
 }
 export default Dash_Layout;
