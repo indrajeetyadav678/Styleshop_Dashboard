@@ -20,8 +20,8 @@ const Dashboard_App = () => {
         <div id="modebody">
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Dash_Layout />}>
-                        <Route index element={<Dashboard />} />
+                    <Route path="dashboard" element={<Dash_Layout />}>
+                        {/* <Route index element={<Dashboard />} /> */}
 
                         <Route path="dashboard" element={<Dashboard />} />
                         <Route path="dmen" element={<Dmenwear />} />

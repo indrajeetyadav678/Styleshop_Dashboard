@@ -1,5 +1,5 @@
 import Product from "../Product";
-import { MenProduct } from "../../Database/ClothsData";
+import { WomenProduct5 } from "../../Database/ClothsData";
 import { useDispatch } from "react-redux";
 import { addtocart } from "../../contoller/AddcartSlice";
 import { Catagorydata } from '../../Database/HomeData';
@@ -11,11 +11,11 @@ const WomenInnerWear=()=>{
         let cartdata = { image: image1, detail: details, price: price, offer: offer, originalprice: originprice, brand: brand, id: id, quantity: quantity1 }
         dispatch(addtocart(cartdata));
     }
-    const productans = MenProduct.map((key) => {
+    const productans = WomenProduct5.map((key) => {
         return (
             <>
                 <Product img={key.image1}
-                    Pdatabase={MenProduct}
+                    Pdatabase={WomenProduct5}
                     Pid={key.id}
                     pid={"like" + key.id}
                     nam={key.details}
