@@ -47,8 +47,7 @@ const Women = () => {
                 <div className="sliderbox">
                     <Carouselslider slider={sliderimg} />
                 </div>
-
-
+                
                 <div className="landing">
                     {productans}
 

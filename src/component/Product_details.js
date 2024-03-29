@@ -4,12 +4,12 @@ import { FaHeart } from "react-icons/fa";
 import { addtolikes, delet } from "../contoller/AddlikeSlice";
 import { useState } from "react";
 import { FaStar } from "react-icons/fa";
+import Controlsimage from "./Controlsimage";
+import { RxCross1 } from "react-icons/rx";
 
-const showimage = "https://rukminim2.flixcart.com/image/832/832/xif0q/shirt/z/b/s/xxl-st10-vebnor-original-imagnvrqqgz6hvnf.jpeg?q=70&crop=false";
 
 const Product_details = (props) => {
     const [changeImage, setChangeImage] = useState(props.image1)
-    var showboximage;
     const mylikeproduct = useSelector(state => state.mylike.likes);
     const dispatch = useDispatch();
     const setlike = (cid) => {
@@ -30,20 +30,36 @@ const Product_details = (props) => {
     const changeimage = (imgno) => {
         setChangeImage(imgno)
     }
-
-
+    const closedimagebox=()=>{
+        document.getElementById('product_detail_show_image_open').style.display="none"
+    }
+    const openimagebox=()=>{
+        document.getElementById('product_detail_show_image_open').style.display="flex"
+    }
     return (
         <>
             <div id="product_detail_mainwrapper">
-                <div id="product_detail_imagepack">
-                    <img src={props.image1} alt="" onClick={() => { changeimage(props.image1) }} />
-                    <img src={props.image2} alt="" onClick={() => { changeimage(props.image2) }} />
-                    <img src={props.image3} alt="" onClick={() => { changeimage(props.image3) }} />
-                    <img src={props.image4} alt="" onClick={() => { changeimage(props.image4) }} />
+                <div id="product_detail_imageSlider">
+                    <div id="product_detail_imagepack">
+                        <img src={props.image1} alt="" onClick={() => { changeimage(props.image1) }} />
+                        <img src={props.image2} alt="" onClick={() => { changeimage(props.image2) }} />
+                        <img src={props.image3} alt="" onClick={() => { changeimage(props.image3) }} />
+                        <img src={props.image4} alt="" onClick={() => { changeimage(props.image4) }} />
+                    </div>
+                </div>
+                <div id="product_detail_show_image_open" >
+                    <div id="product_detail_show_image_close" onClick={closedimagebox}>
+                        <RxCross1 />
+                    </div>
+
+                    <Controlsimage imageopen={changeImage} />
+                    {/* <div id="detail_show_image">
+                        <img src={changeImage} alt="" />
+                    </div> */}
                 </div>
                 <div id="product_detail_show_box">
                     <div id="show_image_box">
-                    <img src={changeImage} alt="" />
+                        <img src={changeImage} alt="" onClick={openimagebox} />
                     </div>
                     <FaHeart className="detailpage_likeheart" id={props.pid} onClick={() => setlike(props.Pid)} />
                     <div id="add_buy_btnwrapper">
@@ -107,7 +123,7 @@ const Product_details = (props) => {
                                 10,678 Ratings
                             </div>
                             <div id="Follower">
-                                <span>34K</span><br/>
+                                <span>34K</span><br />
                                 <span>Followers</span>
                             </div>
                             <div id="Product_type">

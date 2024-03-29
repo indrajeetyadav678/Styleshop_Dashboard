@@ -1,7 +1,7 @@
 import { sliderimg6 } from "../Database/HomeData";
 import Carouselslider from "./Carouselslider";
 import Product from "./Product";
-import { MenProduct } from "../Database/ClothsData";
+// import { MenProduct } from "../Database/ClothsData";
 import { addtocart } from "../contoller/AddcartSlice";
 import { useDispatch } from "react-redux";
 import { Toyproduct } from "../Database/Kidsdatabase";
