@@ -327,7 +327,12 @@
     overflow-x: scroll;
     /* border: 2px solid rgb(98, 255, 0); */
     position: relative;
-    /* top: px; */
+}
+.slideimag1 img{
+    height: 550px;
+}
+.homeslider1 img{
+    height: 550px;
 }
 
 #leftarrow {

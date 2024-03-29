@@ -33,7 +33,7 @@ const Toys = () => {
     })
     return (
         <>
-            <div className="sliderbox">
+            <div className="sliderbox slideimag1">
                 <Carouselslider slider={sliderimg6} />
             </div>
             <div className="landing">

@@ -26,7 +26,7 @@ const Home = () => {
 
     return (
         <div>
-            <div className="sliderbox">
+            <div className="sliderbox homeslider1">
                 <Carouselslider slider={sliderimg2} />
             </div>
             <div className="landing">

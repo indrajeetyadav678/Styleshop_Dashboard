@@ -280,6 +280,12 @@
         width: 100%;
         height: 320px; 
     }
+    .slideimag1 img{
+        height: 500px;
+    }
+    .homeslider1 img{
+        height: 500px;
+    }
 }
 
 /* ======================== About page (special case)  ========== */
@@ -289,6 +295,12 @@
     }
     #aboutdiv1 #one img{
         display: none;
+    }
+    .slideimag1 img{
+        height: 300px;
+    }
+    .homeslider1 img{
+        height: 300px;
     }
 }
 
