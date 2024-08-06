@@ -38,10 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'addcart',
     'authentication',
-    'catagory',
+    'category',
     'payment',
     'product',
-    'qr-code',
+    'qr_code',
     'rest_framework',
     "corsheaders",
 
